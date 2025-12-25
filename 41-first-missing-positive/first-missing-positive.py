@@ -1,8 +1,7 @@
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         nums.sort()
-        m = 0
-        d = {}
+        d, m = {}, 0
         for n in nums:
             if n > 1 and n in d:
                 continue 
