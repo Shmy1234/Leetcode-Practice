@@ -3,7 +3,7 @@ class Solution:
         nums.sort()
         m = 0
         d = {}
-        for i, n in enumerate(nums):
+        for n in nums:
             if n > 1 and n in d:
                 continue 
             if n > 1 and n-1 in d:
