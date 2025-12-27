@@ -3,6 +3,7 @@ class Solution:
         i = 0
         j = 0
         m = 0
+        
         while j < len(prices):
             if i == j:
                 j += 1
