@@ -5,5 +5,6 @@ class Solution:
         """
         l = len(s)//2
         for i in range(l):
-            s[i], s[len(s) - 1 - i] = s[len(s) - 1 - i], s[i]
+            i2 = len(s) - 1 - i
+            s[i], s[i2] = s[i2], s[i]
         
