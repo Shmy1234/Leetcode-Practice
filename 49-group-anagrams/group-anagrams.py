@@ -5,5 +5,10 @@ class Solution:
             l = [0]*26
             for c in s: 
                 l[ord(c) - ord("a")] +=1 
-            d[tuple(l)] = [s] + d.get(tuple(l), [])
+            
+            if tuple(l) in d:
+                d[tuple(l)].append(s)
+            else:
+                d[tuple(l)] = [s]
+
         return list(d.values())
