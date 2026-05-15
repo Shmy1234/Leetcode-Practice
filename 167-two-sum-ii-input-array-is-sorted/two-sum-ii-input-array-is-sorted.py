@@ -6,7 +6,9 @@ class Solution:
             a = numbers[i] + numbers[j]
             if a == target: 
                 return [i+1, j+1]
-            if a < target: 
+            elif a < target: 
                 i+=1
-            if a > target: 
+            else: 
                 j-=1
+        
+        return _
