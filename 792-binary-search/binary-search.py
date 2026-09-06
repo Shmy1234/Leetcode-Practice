@@ -3,7 +3,7 @@ class Solution:
         i = 0
         j = len(nums) -1 
         while i <= j:
-            p = i + ((j - i) // 2)
+            p = ((j + i) // 2)
             if nums[p] > target:
                 j = p-1 
             elif nums[p] < target:
