@@ -5,9 +5,10 @@ class Solution:
         for n in nums: 
             if n-1 in d:
                 d[n] = d[n-1] + 1
-            else:
+            else: 
                 d[n] = 1
+        
         l = list(d.values())
         if l == []:
-            return 0        
+            return 0 
         return max(l)
