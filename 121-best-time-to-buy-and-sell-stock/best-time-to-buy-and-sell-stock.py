@@ -4,8 +4,8 @@ class Solution:
         j = 1
         m = 0
         while j < len(prices):
-            while prices[i] > prices[j]:
-                i+=1 
+            if prices[i] > prices[j]:
+                i=j 
             m = max(m, prices[j] - prices[i])
             j+=1 
         return m
