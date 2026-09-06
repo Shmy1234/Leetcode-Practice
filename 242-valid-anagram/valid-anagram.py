@@ -1,10 +1,13 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        ls = [0]*26
-        lt = [0]*26
-        for c in s:
-            ls[ord(c) - ord('a')] += 1
-        for c in t: 
-            lt[ord(c) - ord('a')] += 1
-        print(ls, lt)
-        return ls == lt
+        if len(s) != len(t): 
+            return False
+
+        l = [0]*26
+        l2 = [0]*26
+
+        for i in range(len(s)):
+            l[ord(s[i]) - ord("a")] += 1
+            l2[ord(t[i]) - ord("a")] +=1
+        
+        return l == l2
